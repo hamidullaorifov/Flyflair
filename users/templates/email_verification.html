@@ -1,0 +1,101 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification - Flair Dispatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .email-wrapper {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #343a40;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .button:hover {
+            background-color: #23272b;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+        .verification-link {
+            word-break: break-all;
+            color: #6c757d;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="email-wrapper">
+            <div class="header">
+{#                <img src="{% static 'images/logo.png' %}" alt="Flair Dispatch Logo" class="logo">#}
+                <h2 style="color: #343a40; margin: 0;">Email Verification</h2>
+            </div>
+
+            <div class="content">
+                <p>Hi {{ user.first_name }},</p>
+
+                <p>Thank you for registering with Flair Dispatch. We're excited to have you on board!</p>
+
+                <p>To complete your registration and verify your email address, please click the button below:</p>
+
+                <div style="text-align: center;">
+                    <a href="{{ verification_link }}" class="button">Verify Email Address</a>
+                </div>
+
+                <p>If the button above doesn't work, you can copy and paste the following link into your browser:</p>
+                <p class="verification-link">{{ verification_link }}</p>
+
+                <p>This link will expire in 1 hour for security reasons.</p>
+            </div>
+
+            <div class="footer">
+                <p><small>Please note, this email is not monitored. Please do not reply.</small></p>
+                <p><small>For any questions or concerns, please email <a href="mailto:Devon.Hurteau@flyflair.com" style="color: #343a40;">Devon.Hurteau@flyflair.com</a></small></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

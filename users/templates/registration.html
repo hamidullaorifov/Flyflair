@@ -1,0 +1,75 @@
+{% extends 'user_main.html' %}
+{% load static %}
+
+{% block title %}Register - Flair Dispatch{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow">
+                <div class="card-header bg-dark text-white text-center py-3">
+                    <h3 class="mb-0">Create Account</h3>
+                    <p class="mb-0">Join Flair Dispatch</p>
+                </div>
+                <div class="card-body p-4">
+                    {% for message in messages %}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                    <form method="post" action="{% url 'register' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-lock-fill"></i>
+                                </span>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                                <div class="invalid-feedback">
+                                    Please enter a password.
+                                </div>
+                            </div>
+                            <div class="form-text">Password must be at least 8 characters long.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-lock-fill"></i>
+                                </span>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirm_password" required>
+                                <div class="invalid-feedback">
+                                    Passwords must match.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-dark">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center py-3">
+                    <a href="{% url 'login' %}" class="btn btn-outline-dark">Back to Sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

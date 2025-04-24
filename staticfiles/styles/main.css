@@ -1,0 +1,427 @@
+/*                           Login - Registration                    */
+
+body {
+    background-color: #f8f9fa;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+}
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+.input-group-text {
+    background-color: #f8f9fa;
+    border-right: none;
+}
+.form-control {
+    border-left: none;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #dee2e6;
+}
+.btn-dark {
+    background-color: #343a40;
+    border: none;
+}
+.btn-dark:hover {
+    background-color: #23272b;
+}
+.invalid-feedback {
+    font-size: 0.875rem;
+}
+
+/*                           HANDOVER STYLES                            */
+.handover-form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.handover-card {
+    background: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.handover-card-header {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 1.5rem;
+    border: none;
+}
+
+.handover-card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.handover-card-body {
+    padding: 2rem;
+}
+
+/* Form Control Styles */
+.handover-form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+#dispatcher {
+    background-color: #F0F0F0;
+}
+
+/*.handover-form-control:focus {*/
+/*    border-color: #4a90e2;*/
+/*    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);*/
+/*}*/
+
+.handover-form-label {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Button Styles */
+.handover-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.handover-btn-primary {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    border: none;
+}
+
+.handover-btn-primary:hover {
+    background: linear-gradient(135deg, #357abd 0%, #2c6aa0 100%);
+    transform: translateY(-1px);
+}
+
+.handover-btn-secondary {
+    background: #6c757d;
+    border: none;
+}
+
+.handover-btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+.handover-btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    border: none;
+}
+
+.handover-btn-danger:hover {
+    background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+    transform: translateY(-1px);
+}
+
+/* Table Styles */
+.handover-table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.handover-table {
+    margin-bottom: 1rem;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.handover-table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.handover-table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.handover-table tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+.handover-table tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+.handover-table th {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 600;
+    border: 1px solid #dee2e6;
+}
+
+.handover-table td {
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+
+/* Checkbox Styles */
+.handover-form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.15em;
+    cursor: pointer;
+}
+
+.handover-form-check-input:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.handover-form-check-label {
+    padding-left: 0.5rem;
+    cursor: pointer;
+}
+
+/* Info Icon Styles */
+.handover-info-icon {
+    color: #4a90e2;
+    margin-left: 0.5rem;
+    cursor: help;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* If you renamed card-body to card-body-handover */
+    .card-body-handover {
+        padding: 1rem;
+    }
+
+    /* Keep .btn since it's a Bootstrap class, add your custom class */
+    .btn.handover-btn {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Animation Styles */
+.handover-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.handover-table tbody tr:hover {
+    background-color: rgba(74, 144, 226, 0.05);
+}
+
+/* Section Headers */
+.handover-section-header {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #4a90e2;
+}
+
+.handover-section-header h5 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* NEW MODAL */
+.handover-modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.handover-modal-header {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    border: none;
+    padding: 1.5rem;
+}
+
+.handover-modal-body {
+    padding: 2rem;
+}
+
+.handover-modal-footer {
+    border-top: 1px solid #e9ecef;
+    padding: 1.5rem;
+}
+
+.handover-date-picker-container {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.handover-date-picker-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+
+/* Handover Viewer */
+
+.handover_boxes {
+    background-color: transparent;
+}
+
+.handover-viewer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.handover-viewer-card {
+    background: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.handover-viewer-card-header {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 1.5rem;
+    border: none;
+}
+
+.handover-viewer-card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.handover-viewer-card-body {
+    padding: 2rem;
+}
+
+/* Readonly form control styles */
+.handover-viewer-form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    cursor: default;
+}
+
+.handover-viewer-form-control:disabled {
+    background-color: #f8f9fa;
+    opacity: 1;
+    color: #2c3e50;
+}
+
+.handover-viewer-form-label {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Table Styles */
+.handover-viewer-table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.handover-viewer-table {
+    margin-bottom: 1rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.handover-viewer-table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.handover-viewer-table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.handover-viewer-table tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+.handover-viewer-table tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+.handover-viewer-table th {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 600;
+    border: 2px solid #dee2e6;
+    padding: 0.75rem;
+}
+
+.handover-viewer-table td {
+    vertical-align: middle;
+    background-color: #fff;
+    border: 2px solid #dee2e6;
+    padding: 0.75rem;
+}
+
+/* Checkbox Styles - readonly */
+.handover-viewer-checkbox {
+    opacity: 1;
+    cursor: default;
+}
+
+.handover-viewer-checkbox:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.handover-viewer-checkbox-label {
+    padding-left: 0.5rem;
+    color: black;
+    font-weight: 400;
+
+}
+
+/* Info Icon Styles */
+.handover-viewer-info-icon {
+    color: #4a90e2;
+    margin-left: 0.5rem;
+}
+
+/* Section Headers */
+.handover-viewer-section-header {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #4a90e2;
+}
+
+.handover-viewer-section-header h5 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* Print friendly styles */
+@media print {
+    .handover-viewer-card {
+        box-shadow: none;
+    }
+
+    .handover-viewer-card-header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .handover-viewer-section-header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
